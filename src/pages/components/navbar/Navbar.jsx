@@ -6,45 +6,54 @@ import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
-
+import Avatar from '@mui/material/Avatar';
+import Assets from '../../../assests';
 import './navbar.scss'
+
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <div className="search">
-          <input type='text' placeholder='Search...' />
-          <SearchOutlinedIcon />
-        </div>
-        <div className="items">
+       <div className="search">
+        <input type="text" placeholder='Search...' />
+        <SearchOutlinedIcon />
+       </div>
+       <div className="items">
           <div className="item">
-            <LanguageOutlinedIcon />
-            English
+            <LanguageOutlinedIcon className='icon' />   
+            English         
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon />
-           
+            <DarkModeOutlinedIcon className='icon' />            
           </div>
           <div className="item">
-            <FullscreenExitOutlinedIcon />
-            
+            <FullscreenExitOutlinedIcon className='icon' />            
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon />
-           
+            <NotificationsNoneOutlinedIcon className='icon' />   
+            <div className="counter">1</div>         
           </div>
           <div className="item">
-            <ChatBubbleOutlineOutlinedIcon />
-           
+            <ChatBubbleOutlineOutlinedIcon className='icon' /> 
+            <div className="counter">2</div>           
           </div>
           <div className="item">
             <ListOutlinedIcon />            
           </div>
-        </div>
+          <div className="item">
+            <Avatar 
+              src={Assets.images.avatar} 
+              sx={{
+                height: 40,
+                width: 40
+              }}
+            /> 
+          </div>
+       </div>
       </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;
