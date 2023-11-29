@@ -13,22 +13,24 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+import { Link } from 'react-router-dom';
 import './sidebar.scss'
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
         <div className="top">
-            <Avatar 
-                alt="Firehawk Digital" 
-                src={Assets.images.logo} 
-                sx={{
-                    height: 54,
-                    width: 54,
-                    borderRadius: 5
-                }}                
-            />
-            <div className='logo'>Firehawk Digital</div>   
+            <Link to="/">
+                <Avatar 
+                    alt="Firehawk Digital" 
+                    src={Assets.images.logo} 
+                    sx={{
+                        height: 54,
+                        width: 54,
+                        borderRadius: 5
+                    }}                
+                />                
+            </Link>              
         </div>
         <hr />   
         <div className="center">

@@ -4,7 +4,7 @@ import New from './pages/new/New';
 import Login from './pages/login/Login';
 import Single from './pages/single/Single';
 import List from './pages/list/List';
-import {userInputs} from '../src/formSource';
+import {userInputs, productInputs} from '../src/formSource';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Route path="products">
           <Route index element={ <List /> } />
           <Route path=":productId" element={<Single /> } />
-          <Route path="new" element={ <New title="Add New Product" /> } />
+          <Route path="new" element={ <New inputs={productInputs}  title="Add New Product" /> } />
       </Route>
     </Routes>
   );
