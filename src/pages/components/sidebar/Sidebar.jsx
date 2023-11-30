@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
         <div className="top">
-            <Link to="/">
+            <Link to="/"style={{textDecoration: "none"}}>
                 <Avatar 
                     alt="Firehawk Digital" 
                     src={Assets.images.logo} 
@@ -41,18 +41,24 @@ const Sidebar = () => {
                     <span>Dashboard</span>
                 </li>
                 <p className="title">LISTS</p>
-                <li>
-                    <PersonOutlineIcon className='icon' />
-                    <span>Users</span>
-                </li>
-                <li>
-                    <StoreIcon className='icon'/>
-                    <span>Products</span>
-                </li>
-                <li>
-                    <CreditCardIcon className='icon' />
-                    <span>Orders</span>
-                </li> 
+                <Link to="/users"style={{textDecoration: "none"}}>
+                    <li>
+                        <PersonOutlineIcon className='icon' />
+                        <span>Users</span>
+                    </li>
+                </Link>
+                <Link to="/products"style={{textDecoration: "none"}}>
+                    <li>
+                        <StoreIcon className='icon'/>
+                        <span>Products</span>
+                    </li>
+                </Link>
+                <Link to="/orders"style={{textDecoration: "none"}}>
+                    <li>
+                        <CreditCardIcon className='icon' />
+                        <span>Orders</span>
+                    </li> 
+                </Link>
                 <li>
                     <LocalShippingIcon className='icon' />
                     <span>Delivery</span>
