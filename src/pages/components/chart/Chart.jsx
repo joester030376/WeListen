@@ -30,7 +30,7 @@ const Chart = ({aspect, title}) => {
           <CartesianGrid strokeDasharray="3 3" className='chartGrid' />
           <XAxis dataKey="name" stroke="gray" />
           <Tooltip />
-          <Area type="monotone" dataKey="total" stroke="#8884d8" fill="#8884d8" />
+          <Area type="monotone" dataKey="total" stroke="#8884d8" fill="#8884d8"  />
         </AreaChart>
       </ResponsiveContainer>
     </div>

@@ -26,6 +26,79 @@
             input {
                 color: gray;
             }
+        }        
+    }
+
+    .sidebar {
+        background-color: #111;
+        border-color: #333;
+
+        .top {
+
+            .logo {
+                color: #333;
+            }
+        }
+
+        hr {            
+            border-color: #333;
+        }
+
+        ul {
+            li {
+                &:hover {
+                    background-color: #333;
+                }
+
+                .icon {
+                    color: #999;
+                }
+            }
+        }
+
+        input {
+            background-color: transparent;
+        }
+    }
+
+    .datatable {
+        .datatableTitle {
+
+            .link {
+                color: gray;
+                border-color: gray;
+            }
+        }
+        .rowdata {
+            color: gray;
+            border: none;
+
+            .viewButton, .deleteButton, .cellWithStatus {
+                color: gray;
+                border: none;
+            }
+        }
+    }
+
+    .newContainer {
+
+        .top {
+
+            h1 {
+                color: gray;
+            }
+        }
+
+        .right {
+
+            .formInput {
+
+                input {
+                    border-color: gray;
+                    background-color: transparent;
+                    color: gray;                    
+                }
+            }
         }
     }
 }
