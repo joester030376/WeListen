@@ -7,6 +7,8 @@ import List from './pages/list/List';
 import {userInputs, productInputs} from '../src/formSource';
 import {DarkModeContext} from './context/darkModeContext';
 import "./style/darkmode.scss";
+import "./app.scss";
+
 import { useContext } from 'react';
 
 function App() {

@@ -3,7 +3,7 @@ import Navbar from "../components/navbar/Navbar";
 import './list.scss';
 import DataTable from "../components/datatable/Datatable";
 
-const List = () => {
+const Lists = () => {
   return (
     <div className="list">   
       <Sidebar />
@@ -15,4 +15,4 @@ const List = () => {
   )
 }
 
-export default List;
+export default Lists;

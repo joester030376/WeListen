@@ -10,46 +10,61 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import { Link } from 'react-router-dom';
 import './sidebar.scss'
 import { useContext } from 'react';
 import { DarkModeContext } from '../../../context/darkModeContext';
-
+import Assets from '../../../assests';
+import Avatar from '@mui/material/Avatar';
 
 const Sidebar = () => {
-
     
-   const { dispatch } = useContext(DarkModeContext);
+    const { darkMode } = useContext(DarkModeContext)
+    const { dispatch } = useContext(DarkModeContext);
     
-
   return (
     <div className="sidebar">
+              
         <div className="top">
-            <h1 className='logo'>Firehawk Digital</h1>    
+            <Avatar 
+                alt="avatar"
+                src={!darkMode ? `${Assets.images.logoLight}` : `${Assets.images.logoDark}`}
+                variant='rounded'
+                sx={{
+                    width: 56,
+                    height: 56
+                }}
+            >
+            </Avatar>
         </div>
         <hr />   
         <div className="center">
             <ul>
-                <p className="title">MAIN</p>
+                <p className="title">DASHBOARD</p>
                 <Link to="/" style={{textDecoration: "none"}}>
                     <li>
                         <DashboardIcon className='icon'/>
                         <span>Dashboard</span>
                     </li>   
                 </Link>
-                <p className="title">LISTS</p>
+                <p className="title">APPLICATION</p>
                 <Link to="/users" style={{textDecoration: "none"}}>
                     <li>
                         <PersonOutlineIcon className='icon' />
                         <span>Users</span>
                     </li>
                 </Link>
-                <Link to="/products" style={{textDecoration: "none"}}>
+                <Link to="/clients" style={{textDecoration: "none"}}>
                     <li>
                         <StoreIcon className='icon'/>
-                        <span>Products</span>
-                    </li>
+                        <span>Clients</span>
+                    </li>                        
                 </Link>
+                    <li>
+                        <ChatBubbleOutlineOutlinedIcon className='icon' />
+                        <span>Chat</span>
+                    </li>
                 <Link to="/orders" style={{textDecoration: "none"}}>
                     <li>
                         <CreditCardIcon className='icon' />
@@ -60,7 +75,7 @@ const Sidebar = () => {
                     <LocalShippingIcon className='icon' />
                     <span>Delivery</span>
                 </li>  
-                <p className="title">USEFUL</p>
+                <p className="title">ADMINSITRATION</p>
                 <li>
                     <AssessmentIcon className='icon' />
                     <span>Stats</span>
