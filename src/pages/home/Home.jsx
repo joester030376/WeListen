@@ -4,6 +4,7 @@ import Navbar from '../components/navbar/Navbar';
 import Widget from '../components/widget/Widget';
 import Lists from '../components/table/Table';
 import Sidebar from '../components/sidebar/Sidebar';
+import Settings from '../components/settings/Settings';
 import './home.scss';
 
 const Home = () => {
@@ -26,7 +27,8 @@ const Home = () => {
           <div className="listTitle">Latest Transactions</div>
           <Lists />
         </div>
-      </div>
+      </div>  
+      <Settings />    
     </div>
   )
 }

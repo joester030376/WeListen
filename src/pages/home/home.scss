@@ -3,6 +3,7 @@
 
     .homeContainer {        
         flex: 6;
+        position: relative;
 
         .widgets, .charts {
             display: flex;
