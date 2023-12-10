@@ -1,12 +1,13 @@
-.settings {
+.settings {    
+    display: flex;
     right: 0;
     top: 30;      
-    position: absolute;    
+    position: absolute; 
     z-index: 1;
-    height: 100vh;     
-
+    height: 100vh;    
+    
     .icon {
-        position: fixed;
+        justify-content: flex-end;
         top: 50%;
         width: 30px;
         height: 30px;
@@ -15,6 +16,34 @@
         color: white;
         -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    }   
+}
+
+.settingsMenu {
+
+   width: 95%;
+   margin: auto;
+   font-family: sans-serif;
+
+    .settingsHeader {                 
+        display: flex;
+        color: gray; 
+        align-items: center;
+        justify-content: space-between; 
+        font-size: 24px;   
+        margin-top: 20px;     
+        
+        .headerIcons {                    
+            display: flex;   
+
+            .links { 
+              height: 20px;
+              width: 20px;
+              margin: 5px; 
+              cursor: pointer;      
+            }
+        }
+        
     }
 }
 

@@ -3,6 +3,7 @@ import Sidebar from '../components/sidebar/Sidebar';
 import Navbar from '../components/navbar/Navbar';
 import Chart from '../components/chart/Chart';
 import List from '../components/table/Table';
+import Settings from '../components/settings/Settings';
 import Assets from '../../assests';
 
 const Single = () => {
@@ -48,7 +49,8 @@ const Single = () => {
           <h1 className="title">Last Transactions</h1>
           <List />
         </div>
-      </div>     
+      </div>  
+      <Settings />    
     </div>
   )
 }

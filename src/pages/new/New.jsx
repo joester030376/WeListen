@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from '@mui/icons-material/DriveFolderUploadOutlined';
+import Settings from "../components/settings/Settings";
 import Assets from "../../assests";
 import './new.scss';
 
@@ -49,6 +50,7 @@ const New = ({inputs, title}) => {
           </div>
         </div>
       </div>
+      <Settings />   
     </div>
   )
 }

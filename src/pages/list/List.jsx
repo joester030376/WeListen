@@ -1,5 +1,6 @@
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
+import Settings from "../components/settings/Settings";
 import './list.scss';
 import DataTable from "../components/datatable/Datatable";
 
@@ -11,6 +12,7 @@ const Lists = () => {
         <Navbar />
           <DataTable />
       </div>
+      <Settings /> 
     </div>
   )
 }

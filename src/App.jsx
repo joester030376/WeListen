@@ -1,3 +1,4 @@
+//import { useState } from "react";
 import {Routes, Route} from 'react-router-dom';
 import Home from "./pages/home/Home";
 import New from './pages/new/New';
@@ -8,17 +9,21 @@ import {userInputs, productInputs} from '../src/formSource';
 import {DarkModeContext} from './context/darkModeContext';
 import "./style/darkmode.scss";
 import "./app.scss";
-
 import { useContext } from 'react';
 
 function App() {
 
- const { darkMode } = useContext(DarkModeContext)
+  //const [token, setToken] = useState();
+  const { darkMode } = useContext(DarkModeContext)
+
+  //if(!token) {
+   // return <Login setToken={setToken} />
+  //}  
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <Routes>
-        <Route index element={ <Home />} />
+        <Route path="/home" element={ <Home />} />
         <Route path="/" element={ <Home /> } />
         <Route path="login" element={ <Login /> } />
         <Route path="users">
