@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import 
+import {colorPresets} from "../../../../../colorpresets";
 import './colorpresets.scss';
 
 const ColorPresets = () => {
@@ -9,12 +9,11 @@ const ColorPresets = () => {
             Presets
         </Typography>
             <ul className="colorPresetList">
-                <li className="colorPreset"><div className="default"></div></li>
-                <li ><div className="green"></div></li>
-                <li><div className="red"></div></li>
-                <li><div className="purple"></div></li>
-                <li><div className="cyan"></div></li>
-                <li><div className="orange"></div></li>
+                {
+                    colorPresets.map((color) => 
+                        <li key={color.id} style="background-color:}`"></li>
+                    )
+                }
             </ul>
     </div>           
   )
