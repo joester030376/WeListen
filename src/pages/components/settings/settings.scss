@@ -27,21 +27,26 @@
 
     .settingsHeader {                 
         display: flex;
-        color: gray; 
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between; 
-        font-size: 24px;   
-        margin-top: 20px;     
+        justify-content: space-between;
+        margin: 20px 0;
         
-        .headerIcons {                    
-            display: flex;   
-
-            .links { 
-              height: 20px;
-              width: 20px;
-              margin: 5px; 
-              cursor: pointer;      
-            }
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: transparent;
+            vertical-align: center;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 2px;
+            padding: 5px;
+            &:hover {
+                background-color: rgba(211, 211, 211, 0.315);
+                transition-delay: 1s;
+            }                
         }
         
     }

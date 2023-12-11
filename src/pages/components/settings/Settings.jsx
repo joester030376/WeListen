@@ -3,11 +3,13 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import Stack from "@mui/material/Stack";
 import './settings.scss';
-import Typography from "@mui/material/Typography";
 import RestartAltOutlinedIcon from '@mui/icons-material/RestartAltOutlined';
 import Divider from "@mui/material/Divider";
+import Tooltip from "@mui/material/Tooltip";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import ColorPresets from "./components/colorpresets/ColorPresets";
 
 const Settings = () => {
   
@@ -29,21 +31,27 @@ const Settings = () => {
       <form action="">
         <div className="settingsMenu">
            <div className="settingsHeader">             
-                Settings
-              <div className="headerIcons">
-                <div className="links"><RestartAltOutlinedIcon /></div>
-                <div className="links">
-                  <CloseOutlinedIcon 
-                    onClick={toggleDrawer('right', false)}  
-                  />
-                  </div>
-              </div>                           
+              <Typography fontSize="24px" fontWeight="700" letterSpacing="1px">
+                  Settings        
+              </Typography>   
+              <Stack direction="row" alignItems="center" gap={1} justifyContent="fle">  
+                               
+                  <Tooltip title="Reset">
+                      <RestartAltOutlinedIcon className="links" />     
+                  </Tooltip>        
+                  <Tooltip title="Close">
+                      <CloseOutlinedIcon className="links"
+                          onClick={toggleDrawer('right', false)}  
+                      />            
+                  </Tooltip>      
+              </Stack>                
            </div>
            <Divider 
               sx={{
                 marginTop: "10px"
               }}
-           />
+           />  
+           <ColorPresets />         
         </div>
       </form>
     </div>
